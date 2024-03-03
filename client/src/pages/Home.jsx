@@ -1,8 +1,10 @@
+import AppLayout from "../components/layout/AppLayout"
+
 const Home = () => {
   return (
-    <div style={{color:"#999"}}>
-      
+    <div className="p-4 text-white">
+      Home Page
     </div>
   )
 }
-export default Home
+export default AppLayout(Home)
