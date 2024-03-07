@@ -1,5 +1,13 @@
 /* eslint-disable react/prop-types */
 import {
+  Add as AddIcon,
+  Group as GroupIcon,
+  Logout as LogoutIcon,
+  Menu as MenuIcon,
+  Notifications as NotificationIcon,
+  Search as SearchIcon,
+} from "@mui/icons-material";
+import {
   AppBar,
   Backdrop,
   Box,
@@ -8,17 +16,8 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import { primaryBlue } from "../constants/colors";
-import {
-  Add as AddIcon,
-  Group as GroupIcon,
-  Logout as LogoutIcon,
-  Menu as MenuIcon,
-  Notifications as NotificationIcon,
-  Search as SearchIcon,
-} from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
 import { Suspense, lazy, useState } from "react";
+import { useNavigate } from "react-router-dom";
 // import SearchBar from "../search/SearchBar";
 const SearchBarDialog = lazy(() => import("../search/SearchBar"));
 const NotificationDialog = lazy(() => import("../notofication/Notifications"));
@@ -74,7 +73,7 @@ const Header = () => {
                 display: { xs: "none", sm: "block" },
               }}
             >
-              <img src={"/logo.jpg"} loading="lazy" alt="chat_logo" className="rounded-full w-14 h-14" />
+              <img src={"/logor.png"} onClick={()=>navigateTo("/")} loading="lazy" alt="chat_logo" className="rounded-full cursor-pointer w-14 h-14" />
             </Typography>
             <Box
               sx={{

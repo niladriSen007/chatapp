@@ -39,7 +39,7 @@ const ChatList = ({
             groupChat={groupChat}
             sameSender={chatId === _id}
             index={index}
-            handleDeleteChatOpen={handleDeleteChat}
+            handleDeleteChat={handleDeleteChat}
           />
         );
       })}
