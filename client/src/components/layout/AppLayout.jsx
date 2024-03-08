@@ -17,7 +17,7 @@ const AppLayout = (WrappedComponent) => {
       <div style={{backgroundColor:"lime"}}>
         <Title />
         <Header />
-        <Grid container  className="bg-black min-h-[calc(100vh-4rem)]">
+        <Grid container  className="bg-black min-h-[calc(100vh-4rem)] max-h-[calc(100vh-4rem)]">
           <Grid
           // height={"100%"}
             item
@@ -36,13 +36,13 @@ const AppLayout = (WrappedComponent) => {
             }
             />
           </Grid>
-          <Grid item xs={12} sm={8} md={5} lg={6} minHeight={"100%"} sx={{
+          <Grid item xs={12} sm={8} md={5} lg={6} className="min-h-[calc(100vh-4rem)] max-h-[calc(100vh-4rem)]" sx={{
             borderLeft:"3px solid lime",
             borderRight:"3px solid lime"
           }}>
             <WrappedComponent {...props} />
           </Grid>
-          <Grid item md={4} lg={3} className="bg-zinc-900"  sx={{
+          <Grid item md={4} lg={3} className="bg-zinc-900 min-h-[calc(100vh-4rem)] max-h-[calc(100vh-4rem)]"  sx={{
               display: { xs: "none", md: "block" },
               padding: "2rem",
               
